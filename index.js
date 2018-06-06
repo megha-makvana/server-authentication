@@ -9,7 +9,7 @@ const app = express();
 const router = require('./router.js')
 const mongoose= require('mongoose')
 //db setup
-mongoose.connect('mongodb://localhost:27017/authdb');
+mongoose.connect('mongodb://localhost/authdb');
 
 //app setup
 app.use(morgan('combined'));
