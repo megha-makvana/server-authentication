@@ -8,6 +8,12 @@ function tokenForUser(user) {
     
 }
 
+exports.signin = function(req, res, next) {
+    //user alreasy has their email and pwd auth'd
+    //provide token
+    res.send({ token: tokenForUser(req.user)})
+}
+
 exports.signup = function(req, res, next) {
     //check whether the email entered exists in the db
     
