@@ -7,6 +7,10 @@ const morgan = require('morgan');
 
 const app = express();
 const router = require('./router.js')
+const mongoose= require('mongoose')
+//db setup
+mongoose.connect('mongodb://localhost:27017/authdb');
+
 //app setup
 app.use(morgan('combined'));
 app.use(bodyParser.json({ type: '*/*' }));
